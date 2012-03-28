@@ -44,7 +44,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="soiduplaan.xml" />
+    <Content Include="soiduplaan.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="soiduplaan.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soiduplaan.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

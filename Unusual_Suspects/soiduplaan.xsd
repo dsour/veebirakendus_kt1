@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Plaan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="object">
+          <xs:complexType>
+            <xs:attribute name="type" type="xs:string" use="required" />
+            <xs:attribute name="cotype" type="xs:string" use="required" />
+            <xs:attribute name="id" type="xs:string" use="required" />
+            <xs:attribute name="style" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Liinid">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Liin">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Suund">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="refid" type="xs:string" use="optional" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element maxOccurs="unbounded" name="Paev" type="xs:string" />
+                    <xs:element name="PeatusedLiinil">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="PeatusLiinil">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Nimetus" type="xs:string" />
+                                <xs:element name="Aeg" type="xs:string" />
+                                <xs:element minOccurs="0" name="Pikkus" type="xs:integer" />
+                              </xs:sequence>
+                              <xs:attribute name="refid" type="xs:string" use="required" />
+                              <xs:attribute name="alates" type="xs:date" use="required" />
+                              <xs:attribute name="kuni" type="xs:date" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="aktiivne" type="xs:boolean" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Peatused">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:choice maxOccurs="unbounded">
+                <xs:element maxOccurs="unbounded" name="Peatus">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="Nimetus" type="xs:string" />
+                      <xs:element minOccurs="0" name="Asukoht">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="Laius" type="xs:integer" />
+                            <xs:element name="Pikkus" type="xs:integer" />
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element minOccurs="0" name="Ajavoond" type="xs:string" />
+                    </xs:sequence>
+                    <xs:attribute name="id" type="xs:unsignedByte" use="required" />
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="Asukoht">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="Laius" type="xs:unsignedInt" />
+                      <xs:element name="Pikkus" type="xs:unsignedInt" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="Ajavoond" type="xs:string" />
+              </xs:choice>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
