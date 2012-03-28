@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Plaan>
+  <object type="{0C55C096-0F1D-4F28-AAA2-85EF591126E7}" cotype="cs" id="cosymantecbfw" style="width: 0px; height: 0px; display: block;"/>
+  <Liinid>
+    <Liin id="0210" aktiivne="true">
+      <Suund refid="s_1">Tallinn-Tapa-Tartu</Suund>
+      <Suund refid="s_2">Tartu-Valga</Suund>
+      <Paev>Esmaspäev</Paev>
+      <Paev>Teisipäev</Paev>
+      <Paev>Kolmapäev</Paev>
+      <Paev>Neljapäev</Paev>
+      <Paev>Reede</Paev>
+      <Paev>Laupäev</Paev>
+      <Paev>Pühapäev</Paev>
+      <PeatusedLiinil>
+        <PeatusLiinil refid="p_1" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>TALLINN</Nimetus>
+          <Aeg>6:46</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_2" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>ÜLEMISTE</Nimetus>
+          <Aeg>6:57</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_3" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>LAGEDI</Nimetus>
+          <Aeg>7:05</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_4" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>ARUKÜLA</Nimetus>
+          <Aeg>7:13</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_5" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>RAASIKU</Nimetus>
+          <Aeg>7:19</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_6" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>KEHRA</Nimetus>
+          <Aeg>7:29</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_7" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>AEGVIIDU</Nimetus>
+          <Aeg>7:45</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_8" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>NELIJÄRVE</Nimetus>
+          <Aeg>7:49</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_9" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>JÄNEDA</Nimetus>
+          <Aeg>7:54</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_10" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>LEHTSE</Nimetus>
+          <Aeg>8:02</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_11" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>TAPA</Nimetus>
+          <Aeg>8:11</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_12" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>TAMSALU</Nimetus>
+          <Aeg>8:26</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_13" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>KILTSI</Nimetus>
+          <Aeg>8:35</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_14" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>RAKKE</Nimetus>
+          <Aeg>8:47</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_15" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>VÄGEVA</Nimetus>
+          <Aeg>8:56</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_16" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>PEDJA</Nimetus>
+          <Aeg>9:05</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_17" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>JÕGEVA</Nimetus>
+          <Aeg>9:14</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_18" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>KAAREPERE</Nimetus>
+          <Aeg>9:25</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_19" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>TABIVERE</Nimetus>
+          <Aeg>9:36</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_20" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>TARTU</Nimetus>
+          <Aeg>9:51</Aeg>
+          <Pikkus>10</Pikkus>
+        </PeatusLiinil>
+        <PeatusLiinil refid="21" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>AARDLA</Nimetus>
+          <Aeg>10:05</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="22" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>ROPKA</Nimetus>
+          <Aeg>10:14</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="23" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>NÕO</Nimetus>
+          <Aeg>10:22</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="24" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>TÕRAVERE</Nimetus>
+          <Aeg>10:28</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="25" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>PEEDU</Nimetus>
+          <Aeg>10:32</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="26" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>ELVA</Nimetus>
+          <Aeg>10:37</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="27" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>PALUPERA</Nimetus>
+          <Aeg>10:49</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="28" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>PUKA</Nimetus>
+          <Aeg>10:59</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="29" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>MÄGISTE</Nimetus>
+          <Aeg>11:04</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="30" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>KEENI</Nimetus>
+          <Aeg>11:13</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="31" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>SANGASTE</Nimetus>
+          <Aeg>11:23</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="32" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>VALGA</Nimetus>
+          <Aeg>11:34</Aeg>
+        </PeatusLiinil>
+      </PeatusedLiinil>
+    </Liin>
+    <Liin id="0010" aktiivne="true">
+      <Suund>Tallinn-Tapa-Tartu</Suund>
+      <Paev>Esmaspäev</Paev>
+      <Paev>Teisipäev</Paev>
+      <Paev>Kolmapäev</Paev>
+      <Paev>Neljapäev</Paev>
+      <Paev>Reede</Paev>
+      <PeatusedLiinil>
+        <PeatusLiinil refid="p_1" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>TALLINN</Nimetus>
+          <Aeg>7:52</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_2" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>ÜLEMISTE</Nimetus>
+          <Aeg>8:03</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_11" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>TAPA</Nimetus>
+          <Aeg>8:54</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_12" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>TAMSALU</Nimetus>
+          <Aeg>9:07</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_17" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>JÕGEVA</Nimetus>
+          <Aeg>9:44</Aeg>
+        </PeatusLiinil>
+        <PeatusLiinil refid="p_20" alates="2011-09-01" kuni="2012-05-26">
+          <Nimetus>TARTU</Nimetus>
+          <Aeg>10:14</Aeg>
+        </PeatusLiinil>
+      </PeatusedLiinil>
+    </Liin>
+  </Liinid>
+  <Peatused>
+    <Peatus id="1">
+      <Nimetus>TALLINN</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="2">
+      <Nimetus>ÜLEMISTE</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="3">
+      <Nimetus>LAGEDI</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="4">
+      <Nimetus>ARUKÜLA</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="5">
+      <Nimetus>RAASIKU</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="6">
+      <Nimetus>KEHRA</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="7">
+      <Nimetus>AEGVIIDU</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="8">
+      <Nimetus>NELIJÄRVE</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="9">
+      <Nimetus>JÄNEDA</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="10">
+      <Nimetus>LEHTSE</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="11">
+      <Nimetus>TAPA</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="12">
+      <Nimetus>TAMSALU</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="13">
+      <Nimetus>KILTSI</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="14">
+      <Nimetus>RAKKE</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="15">
+      <Nimetus>VÄGEVA</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="16">
+      <Nimetus>PEDJA</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="17">
+      <Nimetus>JÕGEVA</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="18">
+      <Nimetus>KAAREPERE</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="19">
+      <Nimetus>TABIVERE</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="20">
+      <Nimetus>TARTU</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="21">
+      <Nimetus>AARDLA</Nimetus>
+    </Peatus>
+    <Asukoht>
+      <Laius>123455</Laius>
+      <Pikkus>354234</Pikkus>
+    </Asukoht>
+    <Ajavoond>GMT+2</Ajavoond>
+    <Peatus id="22">
+      <Nimetus>ROPKA</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="23">
+      <Nimetus>NÕO</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="24">
+      <Nimetus>TÕRAVERE</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="25">
+      <Nimetus>PEEDU</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="26">
+      <Nimetus>ELVA</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="27">
+      <Nimetus>PALUPERA</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="28">
+      <Nimetus>PUKA</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="29">
+      <Nimetus>MÄGISTE</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="30">
+      <Nimetus>KEENI</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="31">
+      <Nimetus>SANGASTE</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+    <Peatus id="32">
+      <Nimetus>VALGA</Nimetus>
+      <Asukoht>
+        <Laius>123455</Laius>
+        <Pikkus>354234</Pikkus>
+      </Asukoht>
+      <Ajavoond>GMT+2</Ajavoond>
+    </Peatus>
+  </Peatused>
+</Plaan>
