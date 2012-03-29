@@ -47,7 +47,9 @@
     <Content Include="soiduplaan.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="soiduplaan.xslt" />
+    <Content Include="soiduplaan.xslt">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="soiduplaan.xsd">

@@ -5,6 +5,13 @@
     <xsl:output method="html" indent="yes"/>
 
     <xsl:template match="/">
-        
+      <html>
+        <head>
+          <title>Edelaraudtee sõiduplaan</title>
+        </head>
+        <body>
+
+        </body>
+      </html>
     </xsl:template>
 </xsl:stylesheet>
