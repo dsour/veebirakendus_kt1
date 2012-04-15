@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unusual_Suspects", "Unusual_Suspects\Unusual_Suspects.csproj", "{3A336B5A-33FD-4AD2-8637-3C268A60716B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleServiceApp", "ScheduleServiceApp\ScheduleServiceApp.csproj", "{EEC459C9-A29D-4F1F-9A17-CA6D266ADD0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{3A336B5A-33FD-4AD2-8637-3C268A60716B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A336B5A-33FD-4AD2-8637-3C268A60716B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A336B5A-33FD-4AD2-8637-3C268A60716B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEC459C9-A29D-4F1F-9A17-CA6D266ADD0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEC459C9-A29D-4F1F-9A17-CA6D266ADD0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEC459C9-A29D-4F1F-9A17-CA6D266ADD0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEC459C9-A29D-4F1F-9A17-CA6D266ADD0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
