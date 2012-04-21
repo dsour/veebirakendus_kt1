@@ -15,49 +15,62 @@ namespace ScheduleServiceApp
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
     public class XmlScheduleService : ScheduleService
     {
-        public LineInformation GetLines()
+        public Line[] GetLines()
         {            
             XPathNavigator navigator = createDocNavigator();
             XPathNodeIterator i;
             i = navigator.Select("/Plaan/Liinid/Liin");
-            var lineInformation = new LineInformation();
+            var lines = new List<Line>();
             while(i.MoveNext())          
-            {
-                var line = createLine(i);
-                lineInformation.AddLine(line);
+            {                
+                lines.Add(createLine(i.Current));
             }
-            return lineInformation;
-        }
-
-        private static XPathNavigator createDocNavigator()
-        {
-            XPathDocument xmldoc = new XPathDocument(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "soiduplaan.xml"));
-            return xmldoc.CreateNavigator();
+            return lines.ToArray();
         }
 
         public LineWithSchedule GetLine(string id)
         {
+            XPathNavigator navigator = createDocNavigator();
             XPathNodeIterator i;
-            i = createDocNavigator().Select("/Plaan/Liinid/Liin[@id = '" + id + "']");
+            i = navigator.Select("/Plaan/Liinid/Liin[@id = '" + id + "']");
             LineWithSchedule lineWithSchedule = null;
             while (i.MoveNext())
             {
-                lineWithSchedule = new LineWithSchedule(createLine(i));
+                lineWithSchedule = new LineWithSchedule(createLine(i.Current));
                 XPathNodeIterator j = i.Current.Select("PeatusedLiinil/PeatusLiinil");
                 while (j.MoveNext())
                 {
                     lineWithSchedule.AddStop(
-                        j.Current.SelectSingleNode("Nimetus").ToString(), 
+                        createStation(navigator.SelectSingleNode("//Peatus[@id = '" + j.Current.SelectSingleNode("@refid") + "']")),                        
                         j.Current.SelectSingleNode("Aeg").ToString());
                 }
             }
             return lineWithSchedule;
         }
 
-        private static Line createLine(XPathNodeIterator i)
+        public Station[] GetStations() 
         {
-            var id = i.Current.SelectSingleNode("@id").ToString();
-            var sectionNodes = i.Current.Select("Suund");
+            var navigator = createDocNavigator();
+            var i = navigator.Select("/Plaan/Peatused/Peatus");
+            List<Station> stations = new List<Station>();
+            while (i.MoveNext())
+            {
+                stations.Add(createStation(i.Current));
+            }
+            return stations.ToArray();
+        }
+
+        private static Station createStation(XPathNavigator node)
+        {
+            return new Station(
+                                node.SelectSingleNode("@id").ToString(),
+                                node.SelectSingleNode("Nimetus").ToString());
+        }
+
+        private static Line createLine(XPathNavigator node)
+        {
+            var id = node.SelectSingleNode("@id").ToString();
+            var sectionNodes = node.Select("Suund");
             var sections = "";
             while (sectionNodes.MoveNext())
             {
@@ -67,17 +80,10 @@ namespace ScheduleServiceApp
             return line;
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        private static XPathNavigator createDocNavigator()
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            XPathDocument xmldoc = new XPathDocument(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "soiduplaan.xml"));
+            return xmldoc.CreateNavigator();
         }
     }
 }

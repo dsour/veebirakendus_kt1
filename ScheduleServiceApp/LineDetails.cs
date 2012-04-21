@@ -9,17 +9,22 @@ namespace ScheduleServiceApp
     [DataContractAttribute]
     public class LineWithSchedule : Line
     {
-        [DataMemberAttribute]
-        public Dictionary<string, string> stopTimes = new Dictionary<string, string>();
+        [DataMember]
+        public StopTimes stopTimes = new StopTimes();
 
         public LineWithSchedule(Line line) : base(line.id, line.route)
         {            
         }
 
-        public void AddStop(string stop, string time)
+        public void AddStop(Station station, string time)
         {
-            stopTimes.Add(stop, time);
+            stopTimes.Add(station, time);
         }
 
+    }
+
+    [CollectionDataContract(Name = "Stops", ItemName="Stop", KeyName = "Station", ValueName = "Time")]
+    public class StopTimes : Dictionary<Station, string>
+    { 
     }
 }
