@@ -16,21 +16,55 @@ namespace ScheduleServiceApp
     public class XmlScheduleService : ScheduleService
     {
         public LineInformation GetLines()
-        {
-            var lineInformation = new LineInformation();
-            XPathDocument xmldoc = new XPathDocument(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "soiduplaan.xml"));
-
-            XPathNavigator navigator = xmldoc.CreateNavigator();
-            
+        {            
+            XPathNavigator navigator = createDocNavigator();
             XPathNodeIterator i;
             i = navigator.Select("/Plaan/Liinid/Liin");
+            var lineInformation = new LineInformation();
             while(i.MoveNext())          
             {
-                var id = i.Current.SelectSingleNode("@id").ToString();
-                var line = new Line(id);
+                var line = createLine(i);
                 lineInformation.AddLine(line);
             }
             return lineInformation;
+        }
+
+        private static XPathNavigator createDocNavigator()
+        {
+            XPathDocument xmldoc = new XPathDocument(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "soiduplaan.xml"));
+            return xmldoc.CreateNavigator();
+        }
+
+        public LineWithSchedule GetLine(string id)
+        {
+            XPathNodeIterator i;
+            i = createDocNavigator().Select("/Plaan/Liinid/Liin[@id = '" + id + "']");
+            LineWithSchedule lineWithSchedule = null;
+            while (i.MoveNext())
+            {
+                lineWithSchedule = new LineWithSchedule(createLine(i));
+                XPathNodeIterator j = i.Current.Select("PeatusedLiinil/PeatusLiinil");
+                while (j.MoveNext())
+                {
+                    lineWithSchedule.AddStop(
+                        j.Current.SelectSingleNode("Nimetus").ToString(), 
+                        j.Current.SelectSingleNode("Aeg").ToString());
+                }
+            }
+            return lineWithSchedule;
+        }
+
+        private static Line createLine(XPathNodeIterator i)
+        {
+            var id = i.Current.SelectSingleNode("@id").ToString();
+            var sectionNodes = i.Current.Select("Suund");
+            var sections = "";
+            while (sectionNodes.MoveNext())
+            {
+                sections += (sections.Length > 0 ? " / " : "") + sectionNodes.Current.ToString();
+            }
+            var line = new Line(id, sections);
+            return line;
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)

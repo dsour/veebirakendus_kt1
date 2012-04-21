@@ -11,11 +11,13 @@ namespace ScheduleServiceApp
     {
         [DataMemberAttribute]
         public string id;
+        [DataMemberAttribute]
+        public string route;
 
-       
-       public Line(string id)
-       {
-           this.id = id;
-       }
+        public Line(string id, string route)
+        {
+            this.id = id;
+            this.route = route;
+        }
     }
 }

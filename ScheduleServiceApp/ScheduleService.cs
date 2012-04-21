@@ -18,6 +18,9 @@ namespace ScheduleServiceApp
         LineInformation GetLines();
 
         [OperationContract]
+        LineWithSchedule GetLine(string id);
+
+        [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
