@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Collections;
 
 namespace ScheduleServiceApp
 {
@@ -14,7 +15,7 @@ namespace ScheduleServiceApp
     {
 
         [OperationContract]
-        string GetData(int value);
+        LineInformation GetLines();
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
@@ -42,6 +43,24 @@ namespace ScheduleServiceApp
         {
             get { return stringValue; }
             set { stringValue = value; }
+        }
+    }
+
+    [DataContract]
+    public class LineInformation
+    {
+        List<Line> lines = new List<Line>();
+
+        [DataMember]
+        public List<Line> Lines
+        {
+            get { return lines; }
+            set { lines = value; }
+        }
+
+        public void AddLine(Line line)
+        {
+            lines.Add(line);
         }
     }
 }

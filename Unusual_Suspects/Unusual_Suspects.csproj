@@ -6,7 +6,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3A336B5A-33FD-4AD2-8637-3C268A60716B}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Unusual_Suspects</RootNamespace>
     <AssemblyName>Unusual_Suspects</AssemblyName>
@@ -51,6 +51,7 @@
   <ItemGroup>
     <Content Include="soiduplaan.xml">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="soiduplaan.xslt">
       <SubType>Designer</SubType>
