@@ -41,11 +41,16 @@ namespace ScheduleServiceApp
                 while (j.MoveNext())
                 {
                     lineWithSchedule.AddStop(
-                        createStation(navigator.SelectSingleNode("//Peatus[@id = '" + j.Current.SelectSingleNode("@refid") + "']")),                        
-                        j.Current.SelectSingleNode("Aeg").ToString());
+                        createStation(navigator.SelectSingleNode("//Peatus[@id = '" + j.Current.SelectSingleNode("@refid") + "']")),
+                        PadTime(i.Current.SelectSingleNode("Aeg").ToString()));
                 }
             }
             return lineWithSchedule;
+        }
+
+        private static string PadTime(string time)
+        {            
+            return (time.PadLeft(5, '0'));
         }
 
         public Station[] GetStations() 
@@ -60,9 +65,23 @@ namespace ScheduleServiceApp
             return stations.ToArray();
         }
 
+        public StationSchedule GetStationSchedule(string id) {
+            var navigator = createDocNavigator();
+            var i = navigator.Select("//PeatusLiinil[@refid = '" + id + "']");            
+            var schedule = new StationSchedule(createStation(navigator.SelectSingleNode("//Peatus[@id = '" + id + "']")));
+            if(schedule != null) {
+                while (i.MoveNext()) {
+                    var line = createLine(i.Current.SelectSingleNode("../.."));
+                    schedule.AddDeparture(line, PadTime(i.Current.SelectSingleNode("Aeg").ToString()));
+                }
+            }
+            return schedule;
+        }
+
+
         private static Station createStation(XPathNavigator node)
         {
-            return new Station(
+            return node == null ? null : new Station(
                                 node.SelectSingleNode("@id").ToString(),
                                 node.SelectSingleNode("Nimetus").ToString());
         }

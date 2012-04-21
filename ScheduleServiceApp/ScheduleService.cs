@@ -23,5 +23,8 @@ namespace ScheduleServiceApp
         [OperationContract]
         Station[] GetStations();
 
+        [OperationContract]
+        StationSchedule GetStationSchedule(string id);
+
     }
 }

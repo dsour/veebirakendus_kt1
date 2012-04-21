@@ -69,6 +69,7 @@
     <Compile Include="Line.cs" />
     <Compile Include="LineDetails.cs" />
     <Compile Include="Station.cs" />
+    <Compile Include="StationSchedule.cs" />
     <Compile Include="XmlScheduleService.svc.cs">
       <DependentUpon>XmlScheduleService.svc</DependentUpon>
     </Compile>
