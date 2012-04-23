@@ -44,10 +44,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="soiduplaan-tabelina.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="soiduplaan.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="soiduplaan.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="soiduplaan_lihtne.xslt">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
