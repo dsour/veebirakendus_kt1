@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Plaan>
-  <object type="{0C55C096-0F1D-4F28-AAA2-85EF591126E7}" cotype="cs" id="cosymantecbfw" style="width: 0px; height: 0px; display: block;"/>
+<Plaan>  
   <Liinid>
     <Liin id="0210" aktiivne="true">
       <Suund refid="s_1">Tallinn-Tapa-Tartu</Suund>
