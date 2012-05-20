@@ -1,0 +1,1 @@
+Kasutajate andmebaasi loomiseks käivitada fail createDB.bat
