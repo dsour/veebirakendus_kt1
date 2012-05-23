@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 
 namespace ScheduleServiceApp
 {
+    // Data object for holding information about a station
     [DataContractAttribute]
     public class Station
     {

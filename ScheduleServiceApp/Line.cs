@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
 
+
 namespace ScheduleServiceApp
 {
+
+    // Data object for train line
     [DataContractAttribute]
     public class Line
     {

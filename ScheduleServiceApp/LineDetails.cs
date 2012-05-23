@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 
 namespace ScheduleServiceApp
 {
+    // Data object for ho‌lding data of a line and its schedule
     [DataContractAttribute]
     public class LineWithSchedule : Line
     {
@@ -16,6 +17,7 @@ namespace ScheduleServiceApp
         {            
         }
 
+        // convenience method for adding stops and times one by one
         public void AddStop(Station station, string time)
         {
             stopTimes.Add(station, time);
@@ -23,6 +25,7 @@ namespace ScheduleServiceApp
 
     }
 
+    // We specify names for items, keys and values to make XML look pretty and readable
     [CollectionDataContract(Name = "Stops", ItemName="Stop", KeyName = "Station", ValueName = "Time")]
     public class StopTimes : Dictionary<Station, string>
     { 

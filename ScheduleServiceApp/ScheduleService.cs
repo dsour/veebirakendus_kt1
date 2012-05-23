@@ -9,20 +9,23 @@ using System.Collections;
 
 namespace ScheduleServiceApp
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
+    // Service contract for our train schedule service
     [ServiceContract]
     public interface ScheduleService
     {
-
+        // Operation that returns a list of defined lines
         [OperationContract]
         Line[] GetLines();
 
+        // Operation that returns information on a specified line with schedule details
         [OperationContract]
         LineWithSchedule GetLine(string id);
 
+        // Operation that returns a list of stations on the lines
         [OperationContract]
         Station[] GetStations();
 
+        // Operation that returns a schedule for a specified station 
         [OperationContract]
         StationSchedule GetStationSchedule(string id);
 
