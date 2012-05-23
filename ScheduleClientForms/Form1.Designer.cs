@@ -106,9 +106,9 @@
             // 
             this.returnButton.Location = new System.Drawing.Point(16, 190);
             this.returnButton.Name = "returnButton";
-            this.returnButton.Size = new System.Drawing.Size(107, 23);
+            this.returnButton.Size = new System.Drawing.Size(133, 23);
             this.returnButton.TabIndex = 10;
-            this.returnButton.Text = "Otsi tagasireise";
+            this.returnButton.Text = "Otsi vastupidist suunda";
             this.returnButton.UseVisualStyleBackColor = true;
             this.returnButton.Visible = false;
             this.returnButton.Click += new System.EventHandler(this.returnButton_Click);

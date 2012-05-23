@@ -20,6 +20,9 @@ namespace ScheduleClientForms
 
     public partial class Form1 : Form
     {
+        public string currentStart;
+        public string currentEnd;
+
         public Form1()
         {
             InitializeComponent();
@@ -54,7 +57,8 @@ namespace ScheduleClientForms
                 }
             }
         }
-
+        
+        //when starting point changes, available destinations will be recalculated
         private void startStationBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             using (ServiceReference1.ScheduleServiceClient client = new ServiceReference1.ScheduleServiceClient())
@@ -84,6 +88,7 @@ namespace ScheduleClientForms
             }
         }
 
+        //search for arrivals -> departures
         private void searchButton_Click(object sender, EventArgs e)
         {
             resultsListBox.Items.Clear();
@@ -92,6 +97,9 @@ namespace ScheduleClientForms
             {
                 if (startStationBox.SelectedItem != null && endStationBox.SelectedItem != null)
                 {
+                    currentStart = startStationBox.SelectedItem.ToString();
+                    currentEnd = endStationBox.SelectedItem.ToString();
+
                     string startIndex = "";
                     string endIndex = "";
 
@@ -99,9 +107,9 @@ namespace ScheduleClientForms
                     var stations = client.GetStations();
                     foreach (var a in stations)
                     {
-                        if (a.name == startStationBox.SelectedItem.ToString())
+                        if (a.name == currentStart)
                             startIndex = a.id;
-                        else if (a.name == endStationBox.SelectedItem.ToString())
+                        else if (a.name == currentEnd)
                             endIndex = a.id;
                     }
                     
@@ -114,7 +122,7 @@ namespace ScheduleClientForms
                         var endSchedule = client.GetStationSchedule(endIndex);
 
                         //add the departures of next 24h in order of time
-                        //first the ones within the same date
+                        //first the ones within the same date...
                         foreach (var dept in startSchedule.departures)
                         {
                             if (DateTime.Parse(dept.Key).TimeOfDay > timeNow.TimeOfDay)
@@ -131,7 +139,7 @@ namespace ScheduleClientForms
                                 }
                             }
                         }
-                        //then the ones in the next date
+                        //...then the ones in the next date
                         foreach (var dept in startSchedule.departures)
                         {
                             //check if departure already listed
@@ -161,6 +169,7 @@ namespace ScheduleClientForms
                     if (resultsListBox.Items.Count > 0)
                     {
                         labelResults.Visible = true;
+                        labelResults.Text = "Järgmised väljumis- ja saabumisajad (" + currentStart + "-" + currentEnd + "):";
                         resultsListBox.Visible = true;
                         returnButton.Visible = true;
                     }
@@ -170,12 +179,17 @@ namespace ScheduleClientForms
 
         private void returnButton_Click(object sender, EventArgs e)
         {
-            resultsListBox.Items.Clear();
-
             using (ServiceReference1.ScheduleServiceClient client = new ServiceReference1.ScheduleServiceClient())
             {
                 if (startStationBox.SelectedItem != null && endStationBox.SelectedItem != null)
                 {
+                    resultsListBox.Items.Clear();
+
+                    //switch starting point and destination
+                    string tempStation = currentStart;
+                    currentStart = currentEnd;
+                    currentEnd = tempStation;
+
                     string startIndex = "";
                     string endIndex = "";
 
@@ -183,9 +197,9 @@ namespace ScheduleClientForms
                     var stations = client.GetStations();
                     foreach (var a in stations)
                     {
-                        if (a.name == endStationBox.SelectedItem.ToString())
+                        if (a.name == currentStart)
                             startIndex = a.id;
-                        else if (a.name == startStationBox.SelectedItem.ToString())
+                        else if (a.name == currentEnd)
                             endIndex = a.id;
                     }
 
@@ -241,6 +255,7 @@ namespace ScheduleClientForms
                                 }
                             }
                         }
+                        labelResults.Text = "Järgmised väljumis- ja saabumisajad (" + currentStart + "-" + currentEnd + "):";
                     }
                 }
             }
